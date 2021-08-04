@@ -31,7 +31,7 @@ def run():
     code_output.insert('1.0', output)
     code_output.insert('1.0', error)
 
-def save_as():
+def save():
     if file_path == '':
         path = asksaveasfilename(filetypes=[('Python Files', '*.py')])
     else:
@@ -41,7 +41,7 @@ def save_as():
         file.write(code)
         set_file_path(path)
 
-def save():
+def save_as():
     path = asksaveasfilename(filetypes=[('Python Files', '*.py')])
     with open(path, 'w') as file:
         code = editor.get('1.0', END)
